@@ -1,0 +1,55 @@
+.ideas {
+    padding: 47px 0 clamp(3.125rem, 0.443rem + 13.41vw, 10.5rem) 0;
+    &__grid {
+        display: grid;
+        grid-template-columns: 497px 1fr;
+        grid-template-rows: auto;
+        grid-auto-rows: auto;
+        gap: 26px;
+        @include tablet {
+            grid-template-columns: 1fr;
+        }
+    }
+    &__title {
+        span {
+            color: var(--accent-color);
+        }
+        @include tablet {
+            text-align: center;
+        }
+    }
+    &__subtitle {
+        margin-top: clamp(1.875rem, 1.261rem + 3.07vw, 3.563rem);
+        font-size: clamp(1.25rem, 1.068rem + 0.91vw, 1.75rem);
+        line-height: clamp(1.75rem, 1.477rem + 1.36vw, 2.5rem);
+        @include tablet {
+            text-align: center;
+        }
+    }
+    &__text {
+        margin-top: clamp(1.25rem, 0.727rem + 2.61vw, 2.688rem);
+        line-height: 28px;
+        p+p {
+            margin-top: 1em;
+        }
+        @include tablet {
+            text-align: center;
+        }
+    }
+    &__image {
+        img {
+            width: 100%;
+            aspect-ratio: 629/509;
+        }
+        @include tablet {
+            max-width: 70%;
+            margin: 0 auto;
+        }
+        @include phoneXL {
+            max-width: 100%;
+        }
+    }
+    &__button {
+        margin: 62px auto 0 auto;
+    }
+}

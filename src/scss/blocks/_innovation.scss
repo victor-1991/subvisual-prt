@@ -1,0 +1,44 @@
+.innovation {
+    max-width: 1242px;
+    margin: 0 auto;
+    border-radius: 28px;
+    background: #2C03AB;
+    padding: clamp(3.125rem, 1.648rem + 7.39vw, 7.188rem) 0 clamp(3.125rem, 1.716rem + 7.05vw, 7rem) 0;
+
+    &__title {
+        max-width: 665px;
+        span {
+            color: #FF7B9B;
+            font-size: 55px;
+            @include tablet {
+                font-size: clamp(1.875rem, 0.648rem + 6.14vw, 5.25rem);
+            }
+        }
+        @include tablet {
+            margin: 0 auto;
+            text-align: center;
+        }
+    }
+    &__text {
+        margin-top: clamp(1.875rem, 1.08rem + 3.98vw, 4.063rem);
+        max-width: 540px;
+        p {
+            color: white;
+            line-height: 28px;
+        }
+        p+p {
+            margin-top: 26px;
+        }
+        @include tablet {
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+    }
+    &__button {
+        margin-left: auto;;
+        @include tablet {
+            margin: 15px auto 0 auto;
+        }
+    }
+}

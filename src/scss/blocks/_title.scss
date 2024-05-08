@@ -1,0 +1,36 @@
+.title {
+    font-size: clamp(1.875rem, 0.648rem + 6.14vw, 5.25rem);
+    line-height: clamp(2.5rem, 1.318rem + 5.91vw, 5.75rem);
+   
+    &--fs84 {
+        // font-size: 84px;
+        font-size: clamp(1.875rem, 0.648rem + 6.14vw, 5.25rem);
+        line-height: clamp(2.5rem, 1.318rem + 5.91vw, 5.75rem);
+        // line-height: 92px;
+        @include tablet {
+            text-align: center;
+         }
+    }
+    &--white {
+        color: white;
+    }
+    &--mini {
+        position: relative;
+        padding-left: 84px;
+        font-size: clamp(1rem, 0.881rem + 0.6vw, 1.25rem);
+        line-height: 28px;
+        text-transform: uppercase;
+        &::before {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            content: "";
+            display: block;
+            width: 56px;
+            height: 1px;
+            background-color: #9563FF;
+
+            transform: translateY(-50%);
+        }
+    }
+}

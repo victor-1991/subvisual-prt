@@ -1,0 +1,39 @@
+.mobile-nav {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // overflow-y: scroll;
+    background-color: #1f3f86;
+
+    position: fixed;
+    left: -100%;
+    top: 0;
+
+    padding: 0 40px;
+    transition: all 0.3s ease-in;
+
+    &__list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 20px;
+        font-size: 28px;
+    }
+    &__link {
+        color: #fff;
+        &.active {
+            opacity: 0.5;
+        }
+    }
+    &--open {
+        left: 0;
+    }
+}

@@ -1,0 +1,78 @@
+.hamburger {
+    --time: .1s;
+
+    --width: 40px;
+    --height: 30px;
+
+    --line-height: 4px;
+    --spacing: 6px;
+
+    --color: #fff;
+    --radius: 4px;
+
+    height: calc(var(--line-height) * 3 + var(--spacing) * 2);
+    width: var(--width);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+
+    &__icon {
+        display: block;
+        position: relative;
+        width: var(--width);
+        height: var(--line-height);
+        background-color: var(--color);
+        border-radius: var(--radius);
+        &::before, &::after {
+            content: '';
+            display: block;
+            
+            position: absolute;
+            left: 0;
+
+            width: var(--width);
+            height: var(--line-height);
+
+            border-radius: var(--radius);
+            background-color: var(--color);
+
+            transition: transform var(--time) ease-in,
+                        top var(--time) linear var(--time); 
+        }
+        &::before {
+            top: calc(-1 * var(--line-height) - var(--spacing));
+        }
+        &::after {
+            top: calc(var(--spacing) + var(--line-height))
+        }
+        &.hamburger__icon--active {
+            background-color: transparent;
+        }
+        &.hamburger__icon--active::before,
+        &.hamburger__icon--active::after {
+            top: 0;
+            transition: top var(--time) linear,
+                        transform var(--time) ease-in var(--time);
+        }
+        &.hamburger__icon--active::before {
+            transform: rotate(45deg);
+        }
+        &.hamburger__icon--active::after {
+            transform: rotate(-45deg);
+        }
+    }
+}
+
+.hamburger {
+	z-index: 999;
+	display: none;
+    @include phoneXL {
+        display: block;
+    }
+}

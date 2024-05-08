@@ -1,0 +1,100 @@
+.header {
+    height: clamp(34.688rem, 29.665rem + 25.11vw, 48.5rem);
+    padding: 28px 0 clamp(3.125rem, 2.193rem + 4.66vw, 5.688rem) 0;
+
+    color: #fff;
+    background-color: #1F3F86;
+    border-radius: 0 0 clamp(1.25rem, 0.341rem + 4.55vw, 3.75rem) clamp(1.25rem, 0.341rem + 4.55vw, 3.75rem);
+
+    .container--1010 {
+        height: 100%;
+    }
+
+    &__wrapper {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0 0 0 clamp(0rem, -0.982rem + 4.91vw, 2.063rem);
+        // padding: 0 0 0 33px;
+
+    }
+    
+    &__nav {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        line-height: 28px;
+        
+    }
+
+    &__list {
+        display: flex;
+        gap: 48px;
+        @include phoneXL {
+            display: none;
+        }
+    }
+
+    &__link, &__join {
+        &:hover {
+            opacity: .5;
+            transition: opacity .3s ease;
+        }
+    }
+
+    &__join {
+        margin-left: 91px;
+
+        font-size: 13px;
+        line-height: 20px;
+        text-transform: uppercase;
+
+        @include phoneXL {
+            display: none;
+        }
+    }
+
+    &__title {
+        max-width: 869px;
+        @include tablet {
+            text-align: center;
+        }
+    }
+
+    &__text {
+       display: flex;
+       align-items: center;
+       gap: 40px;
+       @include phone {
+            flex-direction: column;
+            gap: 20px;
+        }
+        span {
+            max-width: 545px;
+            
+            line-height: 28px;
+            @include phone {
+                order: 1;
+                max-width: 80%;
+                text-align: center;
+                
+            }
+        }
+
+    }
+    &__arrow {
+        transition: opacity .3s ease;
+        &:hover {
+            opacity: .5;
+        }
+        @include phone {
+            order: 2;
+        }
+        img {
+            max-width: 56px;
+            max-height: 56px;
+            object-fit: cover;
+        }
+    }
+}

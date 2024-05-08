@@ -1,0 +1,99 @@
+.services {
+    padding: clamp(3.125rem, -0.744rem + 19.35vw, 11.25rem) 0 clamp(2.5rem, 0.714rem + 8.93vw, 6.25rem) 0;
+    &__header {
+        display: flex;
+        gap: 100px;
+        // padding: 0 66px;
+        @include tablet {
+            flex-direction: column;
+            gap: clamp(1.875rem, -0.208rem + 10.42vw, 6.25rem);
+        }
+    }
+    &__title {
+        max-width: 474px;
+        span {
+            color: var(--accent-color)
+        }
+        @include tablet {
+            max-width: unset;
+            text-align: center;
+        }
+    }
+    &__label {
+        max-width: 457px;
+        font-size: 28px;
+        line-height: 40px;
+        @include tablet {
+            max-width: unset;
+            text-align: center;
+            font-size: clamp(1.25rem, 1.012rem + 1.19vw, 1.75rem);
+            line-height: clamp(1.875rem, 1.577rem + 1.49vw, 2.5rem);
+        }
+    }
+    &__grid {
+        margin-top: clamp(5rem, -32.843rem + 60.98vw, 15.938rem);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 379px);
+        grid-auto-rows: minmax(auto, 326px);
+        gap: clamp(5rem, -1.487rem + 10.45vw, 6.875rem) clamp(1.875rem, -11.1rem + 20.91vw, 5.625rem);
+        // padding: 0 66px;
+        @include tablet {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            grid-auto-rows: auto;
+            row-gap: clamp(1.25rem, -0.536rem + 8.93vw, 5rem);
+        }
+    }
+    &__text-first {
+        @include tablet {
+            grid-row: 1/2;
+        }
+    }
+    &__image-first {
+        @include tablet {
+            grid-row: 2/3;
+        }
+    }
+    &__text-second {
+        @include tablet {
+            grid-row: 3/4;
+        }
+    }
+    &__image-second {
+        @include tablet {
+            grid-row: 4/5;
+        }
+    }
+    &__image {
+        align-self: self-end;
+        img {
+            display: block;
+            width: 100%;
+        }
+        @include tablet {
+            width: unset;
+            justify-self: center;
+        }
+    }
+    &__text-label {
+        margin-top: clamp(1.25rem, 0.952rem + 1.49vw, 1.875rem);
+        max-width: 326px;
+        font-size: clamp(1.375rem, 1.226rem + 0.74vw, 1.688rem);
+        line-height: clamp(2.188rem, 2.039rem + 0.74vw, 2.5rem);
+        @include tablet {
+            max-width: unset;
+            text-align: center;
+        }
+    }
+    &__text-info {
+        margin-top: 27px;
+        line-height: 28px;
+        @include tablet {
+            text-align: center;
+        }
+    }
+    &__button {
+        margin: clamp(2.5rem, 0.179rem + 11.61vw, 7.375rem) auto 0 auto;
+    }
+}

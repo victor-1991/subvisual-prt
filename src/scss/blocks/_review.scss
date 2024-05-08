@@ -1,0 +1,77 @@
+.review {
+    padding: clamp(2.5rem, -0.705rem + 16.02vw, 11.313rem) 0 clamp(3.125rem, -0.511rem + 18.18vw, 13.125rem) 0;
+    background: url('../img/review/review_bg.png') #EFF7FF left bottom no-repeat;
+    &__wrapper {
+        // padding: 0 72px;
+        // min-height: 585px;
+    }
+    &__header {
+        display: flex;
+        gap: clamp(4.75rem, -47.413rem + 84.13vw, 15.688rem); // 251
+        .label {
+            @include tablet {
+                display: none;
+            }
+        }
+    }
+    
+    &__slider {
+        position: relative;
+        padding-left: clamp(15.625rem, -36.538rem + 84.13vw, 26.563rem); // 425
+        min-height: clamp(24.375rem, 20.602rem + 18.86vw, 34.75rem); // 556
+        padding-top: 59px;
+
+        @include tablet {
+           padding-left: 0;;
+        }
+
+        &-btns {
+            position: absolute;
+            bottom: 0;
+            left: 425px;
+
+            display: flex;
+            gap: 28px;
+            button {
+                border: none;
+                outline: none;
+                background: transparent;
+                padding: 0;
+                margin: 0;
+                cursor: pointer;
+                transition: opacity .3s ease;
+                &:hover {
+                    opacity: .5;
+                }
+                img {
+                    width: 56px;
+                    height: 56px;
+                    display: block;
+                    object-fit: cover;
+                }
+            }
+            @include tablet {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+    &__card {
+        max-width: 656px;
+        font-size: clamp(1rem, 0.727rem + 1.36vw, 1.75rem); // 28
+        line-height: clamp(1.75rem, 1.477rem + 1.36vw, 2.5rem); // 40
+    }
+    &__author {
+        margin-top: -3px;
+        font-size: 20px;
+        line-height: 28px;
+        @include phone {
+            font-size: 14px;
+            line-height: 25px;
+        }
+    }
+    @include tablet {
+        background: #EFF7FF;
+    }
+
+}

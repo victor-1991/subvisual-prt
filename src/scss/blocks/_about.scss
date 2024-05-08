@@ -1,0 +1,78 @@
+.about {
+    padding: clamp(5rem, -45.673rem + 81.73vw, 15.625rem) 0 clamp(3.125rem, -11.779rem + 24.04vw, 6.25rem) 0;
+    &__title {
+        // padding-left: 66px;
+        span {
+            color: var(--accent-color);
+        }
+        @include tablet {
+            text-align: center;
+         }
+        &--ml {
+            margin-left: 72px;
+            @include tablet {
+                margin-left: unset;
+            }
+        }
+    }
+    &__grid {
+        margin-top: 30px;
+        // padding: 0 52px 0 66px;
+        display: grid;
+        grid-template-columns: clamp(29.625rem, 2.202rem + 44.23vw, 35.375rem) clamp(28.75rem, 11.76rem + 27.4vw, 32.313rem); //474 460
+        grid-template-rows: minmax(388px, auto);
+        grid-auto-rows: minmax(388px, auto);
+        gap: clamp(2.5rem, -15.385rem + 28.85vw, 6.25rem) clamp(1.75rem, -10.173rem + 19.23vw, 4.25rem); //100 28
+
+        @include tablet {
+            margin-top: -25px;
+            grid-template-columns: 1fr;
+            grid-auto-rows: auto;
+        }
+
+        &-text {
+            padding-top: 64px;
+            line-height: 28px;
+            @include tablet {
+                padding-top: 0;;
+                align-self: center;
+                text-wrap: balance;
+                text-align: center;
+             }
+            p+p {
+                margin-top: 28px;
+            }
+            p {
+                a {
+                    color: var(--accent-color);
+                    text-decoration: underline;
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+        &-photo {
+            &--right {
+                justify-self: end;
+                align-self: self-start;
+            }
+            &--pr25 {
+                padding-right: clamp(0.813rem, -2.764rem + 5.77vw, 1.563rem);
+                @include tablet {
+                   padding-right: unset;;
+                  }
+            }
+            @include tablet {
+                justify-self: center;
+            }
+            img {
+                display: block;
+                width: 100%;
+                @include tablet {
+                  justify-self: center;
+                }
+            }
+        }
+    }
+}

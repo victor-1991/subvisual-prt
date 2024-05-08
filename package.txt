@@ -1,0 +1,26 @@
+Commadn for install all packege:
+npm i gulp gulp-sass sass gulp-file-include gulp-clean browser-sync gulp-plumber gulp-notify gulp-group-css-media-queries gulp-rename --save-dev
+
+Description packege:
+gulp - self gulp;
+gulp-sass - Set for SASS / SCSS;
+sass - need for set SASS / SCSS;
+gulp-file-include - include files one to second. HTML include;
+gulp-clean - remove files;
+browser-sync - server with autoupdate page;
+gulp-plumber - fix mistakes;
+gulp-notify - notification;
+gulp-group-css-media-queries - group CSS meida query;
+gulp-rename - rename files;
+
+
+WebPack:
+	webpack-stream
+	style-loader
+	css-loader
+Babel:
+gulp-babel
+@babel/core
+@babel/preset-env
+
+

@@ -1,0 +1,18 @@
+.ready {
+    padding: clamp(3.125rem, -3.125rem + 31.25vw, 20.313rem) 0 clamp(3.125rem, -0.852rem + 19.89vw, 14.063rem) 0;
+    
+    background: url('../img/ready/bg.jpg') center center/cover no-repeat;
+    &__title {
+        max-width: 858px;
+        @media (max-width: 992px) {
+            max-width: 100%;
+        }
+    }
+    &__button {
+        margin-top: 25px;
+        @media (max-width: 992px) {
+            margin: 15px auto 0 auto;
+        }
+    }
+
+}

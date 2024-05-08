@@ -1,0 +1,25 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 25px;
+    min-height: 257px;
+    max-width: 364px;
+    padding: clamp(1.25rem, 0.727rem + 2.61vw, 2.688rem) clamp(1.25rem, 0.955rem + 1.48vw, 2.063rem) clamp(1.25rem, 0.773rem + 2.39vw, 2.563rem) clamp(1.25rem, 1.068rem + 0.91vw, 1.75rem);
+    border-radius: 28px;
+    background: #E8F4FF;
+    &__text {
+        font-size: 28px;
+        line-height: 40px;
+        p+p {
+            margin-top: 1em;
+        }
+    }
+    &__link {
+        color: var(--accent-color);
+        text-decoration: underline;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}

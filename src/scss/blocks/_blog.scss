@@ -1,0 +1,12 @@
+.blog {
+    padding-bottom: clamp(3.125rem, 1.58rem + 7.73vw, 7.375rem);
+    &__grid {
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+        grid-template-rows: auto;
+        grid-auto-rows: auto;
+        gap: 28px;
+        justify-items: center;
+    }
+}
